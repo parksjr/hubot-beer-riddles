@@ -1,19 +1,23 @@
-chai = require 'chai'
-sinon = require 'sinon'
-chai.use require 'sinon-chai'
+Helper = require 'hubot-test-helper'
+expect = require('chai').expect
+helper = new Helper '../src/beer-riddles.coffee'
 
-expect = chai.expect
+class MockResponse extends Helper.Response
+  random: (items) ->
+    {
+      "src": "http://i.imgur.com/DV4YXXd.jpg",
+      "id" : 11,
+      "answer":""
+    }
 
 describe 'beer-riddles', ->
   beforeEach ->
-    @robot =
-      respond: sinon.spy()
-      hear: sinon.spy()
-
-    require('../src/beer-riddles')(@robot)
-
-  it 'registers a respond listener', ->
-    expect(@robot.respond).to.have.been.calledWith(/hello/)
-
-  it 'registers a hear listener', ->
-    expect(@robot.hear).to.have.been.calledWith(/orly/)
+    @room = helper.createRoom({httpd:false, 'response': MockResponse})
+  context 'user wants a beer cap riddle', ->
+    beforeEach ->
+      @room.user.say 'kevin', 'hubot beer riddle me'
+    it 'should respond with a beer cap riddle image url', ->
+      expect(@room.messages).to.eql [
+        ['kevin', 'hubot beer riddle me']
+        ['hubot', 'http://i.imgur.com/DV4YXXd.jpg']
+      ]

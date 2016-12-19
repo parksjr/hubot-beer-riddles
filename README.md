@@ -4,6 +4,8 @@ Deluxe pilsner beer riddles
 
 See [`src/beer-riddles.coffee`](src/beer-riddles.coffee) for full documentation.
 
+![lionshead](images/head.png)
+
 ## Installation
 
 In hubot project repo, run:

@@ -2,21 +2,20 @@
 #   Deluxe pilsner beer riddles
 #
 # Configuration:
-#   LIST_OF_ENV_VARS_TO_SET
+#   none
 #
 # Commands:
-#   hubot hello - <what the respond trigger does>
-#   orly - <what the hear trigger does>
+#   hubot beer riddle - shows a new riddle from under a beer cap
 #
 # Notes:
-#   <optional notes required for the script>
+#   none
 #
 # Author:
-#   parksjr[@<org>]
+#   parksjr[@parksjr]
+
+baseRiddles = require '../data/base-riddles.json'
 
 module.exports = (robot) ->
-  robot.respond /hello/, (msg) ->
-    msg.reply "hello!"
-
-  robot.hear /orly/, ->
-    msg.send "yarly"
+  robot.respond /beer riddle(?: me)?$/, (res) ->
+    riddle = res.random baseRiddles.riddles
+    res.send riddle.src

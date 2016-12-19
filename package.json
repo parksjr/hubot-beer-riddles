@@ -4,35 +4,41 @@
   "version": "0.0.0",
   "author": "parksjr <mike@parksjr.tech>",
   "license": "MIT",
-
-  "keywords": ["hubot","hubot-scripts","riddle","beer cap riddle","beer","pilsner","lionshead"],
-
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "riddle",
+    "beer cap riddle",
+    "beer",
+    "pilsner",
+    "lionshead"
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-beer-riddles.git"
+    "url": "git://github.com/parksjr/hubot-beer-riddles.git"
   },
-
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-beer-riddles/issues"
+    "url": "https://github.com/parksjr/hubot-beer-riddles/issues"
   },
-
   "dependencies": {
     "coffee-script": "~1.6"
   },
-
   "devDependencies": {
-    "mocha": "*",
     "chai": "*",
-    "sinon-chai": "*",
-    "sinon": "*",
-    "grunt-mocha-test": "~0.7.0",
-    "grunt-release": "~0.6.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-mocha-test": "~0.12.7",
+    "grunt-release": "~0.11.0",
+    "hubot-test-helper": "^1.5.0",
     "matchdep": "~0.1.2",
-    "grunt-contrib-watch": "~0.5.3"
+    "mocha": "*",
+    "sinon": "*",
+    "sinon-chai": "*"
   },
-
+  "peerependencies": {
+    "grunt-cli": "^1.2.0"
+  },
   "main": "index.coffee",
-
   "scripts": {
     "test": "grunt test"
   }
