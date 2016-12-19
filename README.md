@@ -20,7 +20,4 @@ Then add **hubot-beer-riddles** to your `external-scripts.json`:
 
 ## Sample Interaction
 
-```
-user1>> hubot hello
-hubot>> hello!
-```
+![beer riddle sample interaction](images/sample.jpg)
