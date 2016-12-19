@@ -1,0 +1,39 @@
+{
+  "name": "hubot-beer-riddles",
+  "description": "Deluxe pilsner beer riddles",
+  "version": "0.0.0",
+  "author": "parksjr <mike@parksjr.tech>",
+  "license": "MIT",
+
+  "keywords": ["hubot","hubot-scripts","riddle","beer cap riddle","beer","pilsner","lionshead"],
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hubot-scripts/hubot-beer-riddles.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/hubot-scripts/hubot-beer-riddles/issues"
+  },
+
+  "dependencies": {
+    "coffee-script": "~1.6"
+  },
+
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon-chai": "*",
+    "sinon": "*",
+    "grunt-mocha-test": "~0.7.0",
+    "grunt-release": "~0.6.0",
+    "matchdep": "~0.1.2",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+
+  "main": "index.coffee",
+
+  "scripts": {
+    "test": "grunt test"
+  }
+}
