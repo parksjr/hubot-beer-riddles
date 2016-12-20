@@ -1,7 +1,7 @@
 {
   "name": "hubot-beer-riddles",
   "description": "Deluxe pilsner beer riddles",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "parksjr <mike@parksjr.tech>",
   "license": "MIT",
   "keywords": [
